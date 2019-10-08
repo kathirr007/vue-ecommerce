@@ -1,2 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 @import 'admin';
+
+span {
+    &.btn {
+        cursor: pointer;
+    }
+}

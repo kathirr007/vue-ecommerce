@@ -20,8 +20,7 @@
               <img class="img-responsive img-rounded" src="/img/user.png" alt="User picture">
             </div>
             <div class="user-info">
-              <span class="user-name">Jhon
-                <strong>Smith</strong>
+              <span class="user-name">{{profile.name}}
               </span>
               <span class="user-role"> {{email}} </span>
               <span class="user-status">
@@ -104,7 +103,7 @@
 <script>
   // @ is an alias to /src
   // import Hero from "@/components/Hero.vue";
-  import { fb } from '../firebase';
+  import { fb, db } from '../firebase';
 
   export default {
     name: "admin",
@@ -113,6 +112,13 @@
         name: null,
         email: null,
       }
+    },
+    firestore(){
+        const user = fb.auth().currentUser;
+        // console.log(user)
+        return {
+          profile: db.collection('profiles').doc(user.uid),
+        }
     },
     components: {
       // Hero
@@ -134,9 +140,8 @@
 
     created() {
       let user = fb.auth().currentUser;
-      console.log(user);
+      // console.log(user);
       this.email = user.email;
-
     }
   };
 

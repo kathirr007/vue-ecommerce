@@ -1,9 +1,9 @@
 <template>
   <div class="mini-cart">
-   
+
         <!-- Modal -->
         <div class="modal fade" id="miniCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
+          <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">My Bag</h5>
@@ -20,7 +20,7 @@
 
                           <span class='float-right' @click="$store.commit('removeFromCart',item)">X</span>
                         </h5>
-                        <p class="mt-0">{{item.productPrice | currency}}</p>
+                        <p class="mt-0">{{item.productPrice * item.productQuantity | currency}}</p>
                         <p class="mt-0">Quantity : {{item.productQuantity }}</p>
                       </div>
                     </li>
@@ -35,7 +35,7 @@
           </div>
         </div>
 
-    
+
   </div>
 </template>
 
@@ -49,7 +49,7 @@ export default {
 
     checkout(){
       $('#miniCart').modal('hide')
-      this.$router.push('/checkout')  
+      this.$router.push('/checkout')
     }
 
   }

@@ -17,7 +17,7 @@
                                 <span class='float-right' @click="$store.commit('removeFromCart',item)">X</span>
 
                             </h5>
-                            <p class="mt-0">{{item.productPrice | currency}}</p>
+                            <p class="mt-0">{{item.productPrice * item.productQuantity | currency}}</p>
                             <p class="mt-0">Quantity : {{item.productQuantity }}</p>
                         </div>
                         </li>
@@ -29,7 +29,7 @@
                         Total Price : {{ this.$store.getters.totalPrice | currency }}
                     </p>
 
-                   
+
 
                     <card class='stripe-card'
                         :class='{ complete }'
@@ -39,7 +39,7 @@
                         />
 
                         <button class='pay-with-stripe btn btn-primary mt-4' @click='pay' :disabled='!complete'>Pay with credit card</button>
-                    
+
                     </form>
                 </div>
             </div>
