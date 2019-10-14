@@ -1,8 +1,8 @@
-# vue-ecommerce
+# Vue Ecommerce
 
 [![Build Status](https://travis-ci.com/kathirr007/vue-ecommerce.svg?branch=master)](https://travis-ci.com/kathirr007/vue-ecommerce)
 
-**[Vuetify MD Pro](git@github.com:kathirr007/vue-ecommerce)** is Clone of the Vuetify Material Dasboard Template from Creative Tim.
+**[Vue Ecommerce](git@github.com:kathirr007/vue-ecommerce)** is a simple Ecommerce app Built using Vue.js, Vuex & Firebase.
 
 To check live version please checkout **[here](https://kathirr007.github.io/vue-ecommerce)**
 
