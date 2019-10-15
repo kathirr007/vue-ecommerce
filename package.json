@@ -1,7 +1,11 @@
 {
   "name": "vue-shop",
   "version": "0.1.0",
-  "private": true,
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/kathirr007/vue-ecommerce.git"
+  },
+  "author": "Kathirr007",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
